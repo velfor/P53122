@@ -26,6 +26,18 @@ int main()
     float ball_speedx = 2.f;
     float ball_speedy = 3.f;
 
+    //Счет
+    int leftPlayerScore = 0;
+    int rightPlayerScore = 0;
+
+    Font font;
+    font.loadFromFile("DS-DIGIB.ttf");
+
+    Text leftScoreText(std::to_string(leftPlayerScore), font, 64);
+    Text rightScoreText(std::to_string(leftPlayerScore), font, 64);
+    leftScoreText.setPosition(200,10);
+    rightScoreText.setPosition(600, 10);
+
    while (window.isOpen())
     {
         Event event;
@@ -39,16 +51,30 @@ int main()
         
         //обновление объектов игры
         ball.move(ball_speedx, ball_speedy);
-        if (ball.getPosition().x <= 0 ||
-            ball.getPosition().x + 2 * BALL_RADIUS >= WINDOW_WIDTH)
+        if (ball.getPosition().x <= 0)
         {
             ball_speedx = -ball_speedx;
+            rightPlayerScore += 1;
+            rightScoreText.setString(std::to_string(rightPlayerScore));
+        }
+        if (ball.getPosition().x + 2 * BALL_RADIUS >= WINDOW_WIDTH)
+        {
+            ball_speedx = -ball_speedx;
+            leftPlayerScore += 1;
+            leftScoreText.setString(std::to_string(leftPlayerScore));
+        }
+        if (ball.getPosition().y <= 0 || 
+            ball.getPosition().y + 2 * BALL_RADIUS >= WINDOW_HEIGHT)
+        {
+            ball_speedy = -ball_speedy;
         }
         // Отрисовка объектов и окна
         window.clear();
         window.draw(leftBat);
         window.draw(rightBat);
         window.draw(ball);
+        window.draw(rightScoreText);
+        window.draw(leftScoreText);
         window.display();
     }
     return 0;
