@@ -78,7 +78,6 @@ int main()
 			//скорость по оси y сменилась на противоположную
 			ball_speedy = -ball_speedy;
 		}
-
 		//Проверка нажатий клавиш
 		//если клавиша W нажата - лева ракетка вниз
 		if (Keyboard::isKeyPressed(Keyboard::W)) {
@@ -91,6 +90,16 @@ int main()
 		leftBat.move(0, leftBatSpeedY);
 		//и сразу обнуляем скорость
 		leftBatSpeedY = 0;
+		//правая ракетка
+		if (Keyboard::isKeyPressed(Keyboard::Up)) 
+			rightBatSpeedY = -batSpeed;
+		if (Keyboard::isKeyPressed(Keyboard::Down)) 
+			rightBatSpeedY = batSpeed;
+		//двигаем ракетку		
+		rightBat.move(0, rightBatSpeedY);
+		//и сразу обнуляем скорость
+		rightBatSpeedY = 0;
+
 		//Отбивание мяча от ракетки
 		//вычисляем точки-середины сторон описанного вокруг мяча квадрата
 		float ballX = ball.getPosition().x;
