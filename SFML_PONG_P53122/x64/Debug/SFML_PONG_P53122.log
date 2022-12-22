@@ -1,0 +1,6 @@
+﻿  main.cpp
+D:\forvel\SFML_PONG_P53122\main.cpp(8,12): warning C4244: аргумент: преобразование "time_t" в "unsigned int", возможна потеря данных
+D:\forvel\SFML_PONG_P53122\main.cpp(10,46): warning C4244: аргумент: преобразование "const float" в "unsigned int", возможна потеря данных
+D:\forvel\SFML_PONG_P53122\main.cpp(10,32): warning C4244: аргумент: преобразование "const float" в "unsigned int", возможна потеря данных
+D:\forvel\SFML_PONG_P53122\main.cpp(11,27): warning C4244: аргумент: преобразование "const float" в "unsigned int", возможна потеря данных
+  SFML_PONG_P53122.vcxproj -> D:\forvel\SFML_PONG_P53122\x64\Debug\SFML_PONG_P53122.exe
