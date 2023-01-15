@@ -10,14 +10,6 @@ void initBat(sf::RectangleShape& bat, const sf::Color batColor, const sf::Vector
 }
 
 
-void initText(sf::Text& scoreText, int score, sf::Font& font, 
-	const int charSize, const sf::Vector2f textStartPos) {
-	scoreText.setString(std::to_string(score));
-	scoreText.setFont(font);
-	scoreText.setCharacterSize(charSize);
-	scoreText.setPosition(textStartPos);
-}
-
 bool pointInRect(sf::RectangleShape bat, sf::Vector2f point) {
 	float batX = bat.getPosition().x;
 	float batY = bat.getPosition().y;

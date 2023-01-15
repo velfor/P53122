@@ -23,6 +23,5 @@ const sf::Vector2f BALL_START_POS{
 	(WINDOW_HEIGHT - 2 * BALL_RADIUS) / 2 
 };
 
-const int charSize = 64;
-const sf::Vector2f leftTextStartPos{ 200.f, 10.f };
-const sf::Vector2f rightTextStartPos{ 550.f, 10.f };
+const int CHAR_SIZE = 64;
+const sf::Vector2f TEXT_START_POS{ 10.f, 10.f };

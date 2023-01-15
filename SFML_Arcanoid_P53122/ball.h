@@ -5,7 +5,7 @@
 struct Ball {
 	sf::CircleShape shape;
 	float speedx, speedy;
-	int leftScore, rightScore;
+	int score;
 };
 void ballInit(Ball& ball)
 {
@@ -19,18 +19,14 @@ void ballInit(Ball& ball)
 	ball.speedx = arr_speed[index];
 	index = rand() % 10;
 	ball.speedy = arr_speed[index];
-	//задание начальных значений для счета
-	ball.leftScore = 0;
-	ball.rightScore = 0;
+	ball.score = 0;
 }
 void ballReboundHorizontal(Ball& ball) {
 	if (ball.shape.getPosition().x <= 0) {
 		ball.speedx = -ball.speedx;
-		ball.rightScore++;
 	}
 	if (ball.shape.getPosition().x >= (WINDOW_WIDTH - 2 * BALL_RADIUS)) {
 		ball.speedx = -ball.speedx;
-		ball.leftScore++;
 	}
 }
 
