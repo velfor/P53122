@@ -1,0 +1,4 @@
+﻿  main.cpp
+D:\forvel\SFML_BAD_TEMP1\game.h(27,28): warning C4244: 'argument': conversion from 'const float' to 'unsigned int', possible loss of data
+D:\forvel\SFML_BAD_TEMP1\main.cpp(8,12): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+  SFML_BAD_TEMP1.vcxproj -> D:\forvel\SFML_BAD_TEMP1\x64\Debug\SFML_ASTEROIDS.exe
